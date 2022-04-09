@@ -44,15 +44,15 @@ path, i, svg{
     flex-direction: column;
     position: absolute;
     bottom: 0%;
-    background: rgb(241, 27, 27);
-    pointer-events: none;
-    opacity: 0;
+    background: rgb(255, 255, 255);
+    /* pointer-events: none; */
+    /* opacity: 0; */
     padding: 1rem;
     width: 80%;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     /* We are adding an adjustment class */
-    transform: translateY(100px);
+    /* transform: translateY(100px); */
     transition: all 0.5s ease-in-out;
 }
 
@@ -115,4 +115,15 @@ path, i, svg{
     background: none;
     cursor: pointer;
     margin: 2rem 0rem;
+}
+
+/* Slider stuffs */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+    cursor: pointer;
 }
