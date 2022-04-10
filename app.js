@@ -6,9 +6,9 @@ const currentHexes = document.querySelectorAll(".color h2");
 let initialColors;
 
 //EventListeners
-sliders.forEach(slider =>{
-  slider.addEventListener('input', hslcontrols)
-})
+sliders.forEach((slider) => {
+  slider.addEventListener("input", hslcontrols);
+});
 
 //Functions
 
@@ -67,7 +67,17 @@ function colorizeSliders(color, hue, brightness, saturation) {
   brightness.style.backgroundImage = `linear-gradient(to right, ${scaleBright(
     0
   )}, ${scaleBright(0.5)}, ${scaleBright(1)})`;
-  hue.style.backgroundImage = `linear-gradient(to right, rgb(204,75,75), rgb(204,204,75), rgb(75,204,75), rgb(75,204,204), rgb(75,75,204), rgb(204,75,204), rgb(204,75,75))`;
+  hue.style.backgroundImage = `linear-gradient(to right, rgb(204,75,75), 
+  rgb(204,204,75), rgb(75,204,75), rgb(75,204,204), rgb(75,75,204), 
+  rgb(204,75,204), rgb(204,75,75))`;
+}
+
+function hslcontrols(e) {
+  const index =
+    e.target.getAttribute("data-bright") ||
+    e.target.getAttribute("data-bright") ||
+    e.target.getAttribute("data-bright");
+  console.log(index);
 }
 
 randomColors();
