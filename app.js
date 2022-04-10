@@ -5,6 +5,9 @@ const sliders = document.querySelectorAll('input[type="range"]');
 const currentHexes = document.querySelectorAll(".color h2");
 let initialColors;
 
+//EventListeners
+
+
 //Functions
 
 //Color Generator
