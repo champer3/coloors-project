@@ -6,7 +6,9 @@ const currentHexes = document.querySelectorAll(".color h2");
 let initialColors;
 
 //EventListeners
-
+sliders.forEach(slider =>{
+  slider.addEventListener('input', hslcontrols)
+})
 
 //Functions
 
