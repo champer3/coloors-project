@@ -75,9 +75,13 @@ function colorizeSliders(color, hue, brightness, saturation) {
 function hslcontrols(e) {
   const index =
     e.target.getAttribute("data-bright") ||
-    e.target.getAttribute("data-bright") ||
-    e.target.getAttribute("data-bright");
-  console.log(index);
+    e.target.getAttribute("data-sat") ||
+    e.target.getAttribute("data-hue");
+
+    let sliders = e.target.parentElement.querySelectorAll('input[type="range"]')
+    const hue = sliders[0]
+    const brightness = sliders[1]
+    const saturation = sliders[2]
 }
 
 randomColors();
