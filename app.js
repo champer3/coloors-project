@@ -93,3 +93,6 @@ function hslcontrols(e) {
 }
 
 randomColors();
+console.log(chroma.random())
+
+// #191740
