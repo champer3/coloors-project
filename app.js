@@ -10,6 +10,12 @@ sliders.forEach((slider) => {
   slider.addEventListener("input", hslcontrols);
 });
 
+colorDivs.forEach((div, index) =>{
+  div.addEventListener('change', () => {
+    updateTextUI(index)
+  })
+})
+
 //Functions
 
 //Color Generator
