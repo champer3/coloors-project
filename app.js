@@ -104,6 +104,8 @@ function hslcontrols(e) {
     .set("hsl.h", hue.value);
 
   colorDivs[index].style.backgroundColor = color;
+  //Colorize slider
+  colorizeSliders(color, hue, )
 }
 
 function updateTextUI(index) {
