@@ -31,6 +31,7 @@ function randomColors() {
     const randomColor = generateHex();
     //Add it to the array
     initialColors.push(chroma(randomColor).hex())
+    
 
     //Add the color to the background
     div.style.backgroundColor = randomColor;
@@ -57,7 +58,7 @@ function checkTextContrast(color, text) {
   if (luminance > 0.5) {
     text.style.color = "black";
   } else {
-    text.style.colot = "white";
+    text.style.color = "white";
   }
 }
 
@@ -112,9 +113,12 @@ function updateTextUI(index) {
   textHex.innerText = color.hex();
   //Check Contrast
   checkTextContrast(color, textHex);
-  for (let icon of icons) {
-    checkTextContrast(color, icon);
-  }
+  // for (let icon of icons) {
+  //   checkTextContrast(color, icon);
+  // }
+  icons.forEach(icon =>{
+    checkTextContrast(color, icon)
+  })
 }
 
 function resetInputs(){
@@ -126,4 +130,8 @@ function resetInputs(){
 
 randomColors();
 
+
 // #191740
+
+
+
