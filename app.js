@@ -230,6 +230,8 @@ const closeLibraryBtn = document.querySelector('.close-library')
 saveBtn.addEventListener('click', openPalette)
 closeSave.addEventListener('click', closePalette)
 submitSave.addEventListener('click', savePalette)
+libraryBtn.addEventListener('click', openLibrary)
+closeLibraryBtn.addEventListener('click', closeLibrary)
 
 
 //Functions
@@ -300,21 +302,20 @@ function saveToLocal(paletteObj){
 }
 
 function openLibrary(){
-  const popup = li
+  const popup = libraryContainer.children[0]
+  libraryContainer.classList.add('active')
+  popup.classList.add('active')
 }
 
+function closeLibrary(){
+  const popup = libraryContainer.children[0]
+  libraryContainer.classList.remove('active')
+  popup.classList.remove('active')
+}
 
 randomColors();
 
 
-// #191740
-// #06637a
-// #31b6f0
+// #191740 #06637a #31b6f0 #040469 #23eabc
 
-// #135951
-
-// #8bb4b0
-
-
-// #26a7a7
-
+// #135951 #8bb4b0 #26a7a7  #72dba8 #dec2e3
